@@ -18,24 +18,24 @@ Code Examples:
 
     // ১. Abstraction: আমরা শুধু জানি মেশিন 'স্টার্ট' হবে, ভেতরে কী হচ্ছে তা আড়ালে থাকবে
     abstract class Machine {
-    abstract start(): void; // এটি একটি ব্লু-প্রিন্ট বা নিয়ম
+        abstract start(): void; // এটি একটি ব্লু-প্রিন্ট বা নিয়ম
     }
 
     // ২. Inheritance: Car ক্লাসটি Machine ক্লাসের নিয়মগুলো মেনে তৈরি হচ্ছে
     class Car extends Machine {
 
     // ৩. Encapsulation: জ্বালানির পরিমাণ 'private' রাখা হয়েছে যাতে বাইরে থেকে কেউ তা নষ্ট করতে না পারে
-    private _fuel: number = 100;
+        private _fuel: number = 100;
 
     // ৪. Polymorphism: গাড়ি নিজের মতো করে স্টার্ট হওয়ার লজিক দিচ্ছে
-    start() {
-        console.log("গাড়িটি স্টার্ট হচ্ছে... ব্রুম ব্রুম!");
-    }
+        start() {
+            console.log("গাড়িটি স্টার্ট হচ্ছে... ব্রুম ব্রুম!");
+        }
 
     // ক্যাপসুলেটেড ডাটা দেখার নিরাপদ উপায়
-    getFuelStatus() {
-        return `গাড়িতে এখন ফুয়েল আছে: ${this._fuel}%`;
-    }
+        getFuelStatus() {
+            return `গাড়িতে এখন ফুয়েল আছে: ${this._fuel}%`;
+        }
 
     }
 
