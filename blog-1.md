@@ -10,6 +10,7 @@ Code Examples:
 
 // 'any' ব্যবহার করলে ভুল ধরা পড়ে না, যা বিপজ্জনক
 let dataAny: any = "Hello World";
+<br>
 console.log(dataAny.toFixed(2)); // রানটাইমে ভুল হবে, কিন্তু কম্পাইল টাইমে কোনো এরর নেই।
 
 // 'unknown' ব্যবহার করলে টাইপ চেক করতে বাধ্য করে
