@@ -16,13 +16,13 @@
 
 Code Examples:
 
-// ১. Abstraction: আমরা শুধু জানি মেশিন 'স্টার্ট' হবে, ভেতরে কী হচ্ছে তা আড়ালে থাকবে
-abstract class Machine {
-abstract start(): void; // এটি একটি ব্লু-প্রিন্ট বা নিয়ম
-}
+    // ১. Abstraction: আমরা শুধু জানি মেশিন 'স্টার্ট' হবে, ভেতরে কী হচ্ছে তা আড়ালে থাকবে
+    abstract class Machine {
+    abstract start(): void; // এটি একটি ব্লু-প্রিন্ট বা নিয়ম
+    }
 
-// ২. Inheritance: Car ক্লাসটি Machine ক্লাসের নিয়মগুলো মেনে তৈরি হচ্ছে
-class Car extends Machine {
+    // ২. Inheritance: Car ক্লাসটি Machine ক্লাসের নিয়মগুলো মেনে তৈরি হচ্ছে
+    class Car extends Machine {
 
     // ৩. Encapsulation: জ্বালানির পরিমাণ 'private' রাখা হয়েছে যাতে বাইরে থেকে কেউ তা নষ্ট করতে না পারে
     private _fuel: number = 100;
@@ -37,12 +37,12 @@ class Car extends Machine {
         return `গাড়িতে এখন ফুয়েল আছে: ${this._fuel}%`;
     }
 
-}
+    }
 
-// ক্লাসটি ব্যবহার করা
-const myCar = new Car();
-myCar.start(); // আউটপুট: গাড়িটি স্টার্ট হচ্ছে... ব্রুম ব্রুম!
-console.log(myCar.getFuelStatus()); // আউটপুট: গাড়িতে এখন ফুয়েল আছে: 100%
+    // ক্লাসটি ব্যবহার করা
+    const myCar = new Car();
+    myCar.start(); // আউটপুট: গাড়িটি স্টার্ট হচ্ছে... ব্রুম ব্রুম!
+    console.log(myCar.getFuelStatus()); // আউটপুট: গাড়িতে এখন ফুয়েল আছে: 100%
 
 
 বড় বড় প্রজেক্টে যখন হাজার হাজার লাইনের কোড থাকে, তখন এই চারটি নিয়ম মেনে চললে কোড মেইনটেইন করা অনেক সহজ হয়ে যায়। এটি কেবল কোডকে সুন্দর করে না, বরং টিমের অন্য ডেভেলপারদের জন্যও তোমার কোড বোঝা সহজ করে তোলে। একজন দক্ষ ডেভেলপার হতে হলে OOP-এর এই ধারণাগুলো আয়ত্ত করা খুবই জরুরি।
