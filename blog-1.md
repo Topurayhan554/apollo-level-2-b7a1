@@ -9,26 +9,25 @@ TypeScript-এ যখন আমরা কোনো ভ্যারিয়েব�
 
 Code Examples:
 
-// 'any' ব্যবহার করলে ভুল ধরা পড়ে না, যা বিপজ্জনক
-let dataAny: any = "Hello World";
-<br>
-console.log(dataAny.toFixed(2)); // রানটাইমে ভুল হবে, কিন্তু কম্পাইল টাইমে কোনো এরর নেই। 
-<br>
+    // 'any' ব্যবহার করলে ভুল ধরা পড়ে না, যা বিপজ্জনক
+    let dataAny: any = "Hello World";
 
-// 'unknown' ব্যবহার করলে টাইপ চেক করতে বাধ্য করে <br>
-let dataUnknown: unknown = "Hello TypeScript";
-<br>
-// টাইপ ন্যারোইং (Type Narrowing)
-<br>
-if (typeof dataUnknown === "string") { 
-<br>
-console.log(dataUnknown.toUpperCase()); // এখন এটি নিরাপদ
-<br>
-}
-<br>
-else if (typeof dataUnknown === "number") {
-<br>
-console.log(dataUnknown.toFixed(2));
-}
+    console.log(dataAny.toFixed(2)); // রানটাইমে ভুল হবে, কিন্তু কম্পাইল টাইমে কোনো এরর নেই। 
+
+
+    // 'unknown' ব্যবহার করলে টাইপ চেক করতে বাধ্য করে <br>
+    let dataUnknown: unknown = "Hello TypeScript";
+
+    // টাইপ ন্যারোইং (Type Narrowing)
+
+    if (typeof dataUnknown === "string") { 
+    console.log(dataUnknown.toUpperCase()); // এখন এটি নিরাপদ
+
+    }
+
+    else if (typeof dataUnknown === "number") {
+
+    console.log(dataUnknown.toFixed(2));
+    }
 <br><br>
 মুলকথা হলো যে, অনিশ্চিত ডাটার ক্ষেত্রে any এর বদলে unknown ব্যবহার করলে কোডে ভুল হওয়ার ভয় থাকে না।
