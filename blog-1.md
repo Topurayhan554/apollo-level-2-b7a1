@@ -21,13 +21,13 @@ Code Examples:
     // টাইপ ন্যারোইং (Type Narrowing)
 
     if (typeof dataUnknown === "string") { 
-    console.log(dataUnknown.toUpperCase()); // এখন এটি নিরাপদ
+        console.log(dataUnknown.toUpperCase()); // এখন এটি নিরাপদ
 
     }
 
     else if (typeof dataUnknown === "number") {
 
-    console.log(dataUnknown.toFixed(2));
+        console.log(dataUnknown.toFixed(2));
     }
 <br><br>
 মুলকথা হলো যে, অনিশ্চিত ডাটার ক্ষেত্রে any এর বদলে unknown ব্যবহার করলে কোডে ভুল হওয়ার ভয় থাকে না।
